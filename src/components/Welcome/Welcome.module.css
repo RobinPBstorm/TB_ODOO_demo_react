@@ -1,0 +1,9 @@
+.article {
+    :nth-child(1) {
+        font-weight: bolder;
+    }
+    
+    :nth-child(2) {
+        color: gray;
+    }
+}

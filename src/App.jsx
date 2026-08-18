@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import MessageDisplay from './components/MessageDisplay/MessageDisplay'
+import Welcome from './components/Welcome/Welcome'
 
 export default function App() {
   const [count, setCount] = useState(0)
