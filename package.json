@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "echo bonjour",
     "dev": "vite --open",
-    "start": "vite",
+    "start": "vite  --host 0.0.0.0",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
