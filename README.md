@@ -1,5 +1,14 @@
 # HOW TO React JS
 
+- [Pré-requis](#pré-requis:-nodejs)
+- [Créer un projet React](#créer-un-projet-react)
+- [Créer notre premier composant](#créer-notre-premier-composant)
+- [Passage de paramètre dans un composant](#passage-de-paramètre-dans-un-composant)
+- [Le rendu conditionnel](#le-rendu-conditionnel)
+
+- [Ressources auto-généré](#ressources-auto-généré)
+
+
 ## Pré-requis: NodeJS
 
 Installer NodeJS [ici](https://nodejs.org/en/download)
@@ -54,7 +63,7 @@ Et on l'appel comme ceci dans un composant parent:
 </div>
 ```
 
-## Passage de paramètre d'un parent vers un enfant
+## Passage de paramètre dans un composant
 
 On peut définir les paramètres via le déstucturing (conseillé)
 
@@ -103,9 +112,10 @@ return (
 
 ## Todo Changer le changement de style d'un composant
 
-# Ressources auto-généré:
 
-# React + Vite
+## Ressources auto-généré:
+
+### React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -114,10 +124,10 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+#### React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+#### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
