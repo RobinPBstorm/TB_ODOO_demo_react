@@ -1,4 +1,4 @@
-import "./MessageDisplay.css"
+import styles from "./MessageDisplay.module.css"
 
 export default function MessageDisplay({name, msg="reste silencieux"}) {
 
@@ -16,8 +16,8 @@ export default function MessageDisplay({name, msg="reste silencieux"}) {
         <>
             {
                 name ?
-                (<p className="messageValide">{name}: {msg}</p>):
-                (<p className="messageErreur">Vous avez oublié de fournir un nom</p>)
+                (<p className={styles.messageValide}>{name}: {msg}</p>):
+                (<p className={styles.messageErreur}>Vous avez oublié de fournir un nom</p>)
             }
         </>
     )

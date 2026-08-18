@@ -5,6 +5,7 @@
 - [Créer notre premier composant](#créer-notre-premier-composant)
 - [Passage de paramètre dans un composant](#passage-de-paramètre-dans-un-composant)
 - [Le rendu conditionnel](#le-rendu-conditionnel)
+- [Changer le style dans un composant](#changer-le-style-dans-un-composant)
 
 - [Ressources auto-généré](#ressources-auto-généré)
 
@@ -110,7 +111,31 @@ return (
 )
 ```
 
-## Todo Changer le changement de style d'un composant
+## Changer le style dans un composant
+
+Créer un fichier .css
+
+importer ce fichier dans le composant
+```jsx
+import "./MonComposant.css"
+
+export default function MonComposant () {
+    ...
+}
+```
+
+#Si nous souhaitons utiliser des classes / id css uniquement applicable sur notre composant:#
+
+Notre fichier css aura comme extension #.module.css#
+
+```jsx
+import styles from "./MonComposant.module.css"
+
+export default function MonComposant () {
+    ...
+    <p className={styles.maClasse}></p>
+}
+```
 
 
 ## Ressources auto-généré:
