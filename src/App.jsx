@@ -6,6 +6,7 @@ import './App.css'
 import MessageDisplay from './components/MessageDisplay/MessageDisplay'
 import Welcome from './components/Welcome/Welcome'
 import Counter from './components/Counter/Counter'
+import Timer from './components/Timer/Timer'
 
 export default function App() {
   const [count, setCount] = useState(0)
