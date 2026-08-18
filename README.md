@@ -6,6 +6,7 @@
 - [Passage de paramètre dans un composant](#passage-de-paramètre-dans-un-composant)
 - [Le rendu conditionnel](#le-rendu-conditionnel)
 - [Changer le style dans un composant](#changer-le-style-dans-un-composant)
+- [Les collections](#les-collections)
 
 - [Ressources auto-généré](#ressources-auto-généré)
 
@@ -158,7 +159,38 @@ const handleClick = () => {
 
 S'il y a un changement, cela n'apparaîtera pas car l'affichage ne s'actualisera pas.
 
-##
+## Les collections
+
+On va pouvoir afficher les éléments d'une collection grace à la function map
+```jsx
+export default function OdooList () {
+    const group = [
+        "Arnaud",
+        "François",
+        "Loïc",
+        "Mara",
+        "Louis",
+        "Hugo",
+        "Gillian",
+        "Mattis",
+        "Ben",
+        "Emmanuel",
+        "Maxime",
+        "Théo"
+    ]
+
+    return (
+        <div>
+            <ul>
+                {group.map((person, index) => <li key={index} name={person}/>)}
+            </ul>
+        </div>
+    )
+}
+```
+
+/!\ Une key doit être être fournie avec une valeur unique et stable pour chaque élément.
+L'usage de l'index d'une liste doit être utilisé en cas de dernier recours (des effets de bord sont dés leur possible).
 
 
 ## Ressources auto-généré:

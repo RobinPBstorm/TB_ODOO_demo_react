@@ -7,13 +7,14 @@ import MessageDisplay from './components/MessageDisplay/MessageDisplay'
 import Welcome from './components/Welcome/Welcome'
 import Counter from './components/Counter/Counter'
 import Timer from './components/Timer/Timer'
+import OdooList from './components/OdooList/OdooList'
 
 export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Counter/>
+      <OdooList/>
     </>
   )
 }
