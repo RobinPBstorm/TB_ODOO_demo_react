@@ -1,6 +1,6 @@
 # HOW TO React JS
 
-- [Pré-requis](#pré-requis:-nodejs)
+- [Pré-requis](#pré-requis-nodejs)
 - [Créer un projet React](#créer-un-projet-react)
 - [Créer notre premier composant](#créer-notre-premier-composant)
 - [Passage de paramètre dans un composant](#passage-de-paramètre-dans-un-composant)
@@ -10,7 +10,7 @@
 - [Ressources auto-généré](#ressources-auto-généré)
 
 
-## Pré-requis: NodeJS
+## Pré-requis NodeJS
 
 Installer NodeJS [ici](https://nodejs.org/en/download)
 
@@ -136,6 +136,29 @@ export default function MonComposant () {
     <p className={styles.maClasse}></p>
 }
 ```
+
+## Jouer avec les événements
+
+/!\ les événements sont en lower camel case
+
+```jsx
+<button onClick={handleClick}>Cliquer ici</button>
+```
+
+Par convention, la fonction flechée sera nommé handleEvent
+
+```jsx
+// exemple pour handleClick
+let count = 0
+const handleClick = () => {
+    count++;
+    console.log(count);
+}
+```
+
+S'il y a un changement, cela n'apparaîtera pas car l'affichage ne s'actualisera pas.
+
+##
 
 
 ## Ressources auto-généré:

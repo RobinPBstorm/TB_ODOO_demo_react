@@ -5,16 +5,14 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import MessageDisplay from './components/MessageDisplay/MessageDisplay'
 import Welcome from './components/Welcome/Welcome'
+import Counter from './components/Counter/Counter'
 
 export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <p>La liste des messages</p>
-      <MessageDisplay name="Zorro" msg="Encore une journée qui se termine Bernardo."></MessageDisplay>
-      <MessageDisplay name="Bernardo"></MessageDisplay>
-      <MessageDisplay></MessageDisplay>
+      <Counter/>
     </>
   )
 }
