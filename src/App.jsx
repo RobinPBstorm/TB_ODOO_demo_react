@@ -9,13 +9,15 @@ import Counter from './components/Counter/Counter'
 import Timer from './components/Timer/Timer'
 import OdooList from './components/OdooList/OdooList'
 import ProductList from './components/ProductList/ProductList'
+import PizzaFormControl from './components/PizzaFormControl/PizzaFormControl'
+import PizzaFormAction from './components/PizzaFormAction/PizzaFormAction'
 
 export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <OdooList/>
+      <PizzaFormAction/>
     </>
   )
 }
