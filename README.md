@@ -192,6 +192,117 @@ export default function OdooList () {
 /!\ Une key doit être être fournie avec une valeur unique et stable pour chaque élément.
 L'usage de l'index d'une liste doit être utilisé en cas de dernier recours (des effets de bord sont dés leur possible).
 
+## La gestion des formulaires
+
+### Les composants contrôlés
+
+On exploit un useState (soit global/ soit un par input que l'on va remplir) et on détecte les changements dans chaque inputs pour les appliquer dans notre state.
+
+On termine avec un handle dédié pour le submit.
+
+```jsx
+// gestion générale des changements dans les inputs
+const handleInput = (event) => {
+    const {name, type, value, checked} = event.target;
+    console.log(name, value, typeof value)
+    setData(data => ({
+            ...data,
+            [name]: value 
+        })
+    );
+}
+
+// gestion de l'event de submit du formulaire
+const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // opération d'envoie des données
+    console.log(data);
+}
+
+return (
+        // association de notre handleSubmit à l'event onSumbit
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="typePizza">Choississez votre pizza:</label>
+            <select 
+                name="typePizza" 
+                id="typePizza"
+                // association du handleInput à l'évent du changement de valeur de cette input 
+                onChange={handleInput} 
+                value={data.typePizza}>
+                {
+                    pizzas.map(
+                        pizza => 
+                            <option 
+                                key={pizza.id} 
+                                value={pizza.id}>
+                                {pizza.name}
+                            </option>)
+                }
+            </select><br />
+
+            ...
+
+            <input type="submit" value="Commander"/>
+        </form>
+    )
+```
+
+
+
+### Les actions du composant form
+
+Depuis la version 19 de react, on peut jouer avec des actions.
+
+Les actions sont des fonctions exploitant le formData (représentation sous forme d'objet js du formulaire).
+
+Un useActionState est un hook qu actualise un state en utilisant une action
+
+```jsx
+// action déclencher lors submit
+async function exampleOrder(prevState, formData) {
+    const sizePizza = formData.get("sizePizza");
+    const typePizza = formData.get("typePizza");
+
+    //validaton des valeurs ...
+    ...
+    
+    return {
+        message : "Commande s'est bien passé."
+    }
+}
+
+
+export default function PizzaFormAction() {
+    const [state, handleAction, isPending] = useActionState(exampleOrder, {message : ""});
+
+    return (
+        // se base plus sur l'objet formData
+        // cette action agit lors du submit
+        <form action={handleAction}>
+            <label htmlFor="typePizza">Choississez votre pizza:</label>
+            <select 
+                name="typePizza" 
+                id="typePizza">
+                    {
+                        pizzas.map(
+                            pizza => 
+                                <option 
+                                    key={pizza.id} 
+                                    value={pizza.id}>{pizza.name}</option>
+                    )}
+            </select><br />
+
+            ...
+
+            <input type="submit" value="Commander" disabled={isPending}/>
+
+            {state.message && (<p>{state.message}</p>)}
+        </form>
+    )
+}
+```
+
 
 ## Ressources auto-généré:
 
