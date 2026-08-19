@@ -11,6 +11,7 @@ import OdooList from './components/OdooList/OdooList'
 import ProductList from './components/ProductList/ProductList'
 import PizzaFormControl from './components/PizzaFormControl/PizzaFormControl'
 import PizzaFormAction from './components/PizzaFormAction/PizzaFormAction'
+import CalculatriceControl from './components/CalculatriceControl/CalculatriceControl'
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +19,7 @@ export default function App() {
   return (
     <>
       {/* <PizzaFormControl/> */}
-      <PizzaFormAction/>
+      <CalculatriceControl/>
     </>
   )
 }
