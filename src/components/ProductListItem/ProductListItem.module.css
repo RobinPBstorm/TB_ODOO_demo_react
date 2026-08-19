@@ -1,0 +1,22 @@
+.promotion {
+    color: red;
+}
+
+.card {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 32%
+}
+.content {
+    width: 100%;
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+
+    width: 100%;
+}
