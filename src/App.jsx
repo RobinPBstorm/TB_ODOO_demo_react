@@ -13,6 +13,7 @@ import PizzaFormControl from './components/PizzaFormControl/PizzaFormControl'
 import PizzaFormAction from './components/PizzaFormAction/PizzaFormAction'
 import CalculatriceControl from './components/CalculatriceControl/CalculatriceControl'
 import MeteoDuJour from './components/MeteoDuJour/MeteoDuJour'
+import TodoList from './pages/TodoList/TodoListPage';
 
 export default function App() {
   const [count, setCount] = useState(0)

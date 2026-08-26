@@ -1,0 +1,23 @@
+.tache {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.tacheUrgente {
+    border-color: rgb(200,0,0);
+    background-color: rgb(255,100,100);
+}
+.tacheNormale {
+    border-color: rgb(175, 200, 75);
+    background-color: rgb(250, 225, 100);
+}
+.tacheBasse {
+    border-color: rgb(96, 160, 79);
+    background-color: rgb(101, 236, 157);
+}
+
+.tacheFinie {
+    filter:opacity(0.25)
+}
