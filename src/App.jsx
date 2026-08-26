@@ -15,15 +15,17 @@ import CalculatriceControl from './components/CalculatriceControl/CalculatriceCo
 import MeteoDuJour from './components/MeteoDuJour/MeteoDuJour'
 import TodoList from './pages/TodoList/TodoListPage';
 import CycleDeVieComposant from './components/cycleDeVieComposant/cycleDeVieComposant'
+import Pokedex from './components/Pokedex/Pokedex';
+import PokedexUse from './components/PokedexUse/PokedexUse'
 
 export default function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <PizzaFormControl/> */}
-      {/* <CalculatriceControl/> */}
-      <MeteoDuJour/>
+      {/* <TodoList/> */}
+      {/* <CycleDeVieComposant/> */}
+      {/* <Pokedex/> */}
+      <PokedexUse/>
     </>
   )
 }
